@@ -1,0 +1,230 @@
+.navbar {
+    background-color: #1f1955;
+    position: fixed;
+    top: 0;
+}
+
+
+
+
+body {
+    padding-top: 10px;
+    /*50px for the height of the navbar + 37px for the offset*/
+
+}
+
+.navbar {
+    max-width: 100vw;
+}
+
+.nav>a:hover {
+    background-color: #fafafa;
+}
+
+.navbar-nav>.active>a {
+    color: yellow !important;
+}
+
+
+.btn {
+    background-color: #1e1953;
+}
+
+.navbar-custom {
+    background: #1f1955
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #ffffff;
+    transition: 0.4s
+}
+
+
+.nav-item:hover::after {
+    width: 100%
+}
+
+
+.nav-link {
+    padding: 25px 5px;
+    transition: 0.2s
+}
+
+
+
+.nav.navbar-nav.navbar-right li a {
+    color: #ffffff;
+}
+
+.firstheading {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+
+.secondheading {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+.imageheading {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Agdasima', sans-serif;
+    background-color: #262038;
+}
+
+.jumbotron {
+    background-image: url('Images/space.jpg');
+    background-size: 100% 100%;
+    min-height: 1080px;
+    background-position: center center;
+
+}
+
+.footer {
+
+    background-color: azure;
+}
+
+#inlinetexts {
+    display: inline;
+    vertical-align: top;
+    line-height: 50px;
+}
+
+.btn-warning:hover {
+    color: black !important;
+    background-color: azure !important;
+}
+
+.progress-bar {
+    background-color: #6590f9 !important;
+}
+
+.img-container {
+
+    position: relative;
+    display: inline-block;
+}
+
+.img-text {
+    top: 20%;
+    margin-top: 80px;
+    margin-left: 600px;
+    position: absolute;
+    background-color: yellow;
+    display: block;
+}
+
+.error {
+    color: rgb(243, 93, 93);
+}
+
+/*Animating the astronaut*/
+@keyframes example {
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(20px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.imageheading {
+    display: inline-block;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/*Fading in the heading text*/
+.mainheading,
+.mainbutton {
+    display: none;
+}
+
+.hideme {
+    opacity: 0
+}
+
+.downarrowanimation {
+    display: inline-block;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+
+/*Fixing navbar width on different devices*/
+@media (min-width: 768px) and (max-width: 1000px) {
+    .customwidth {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+}
+
+/*Fixing homepage image height acc to navbar on different devices*/
+@media (max-width: 767px) {
+    .custommargin {
+        margin-top: -16px !important;
+    }
+}
+
+
+/*Fixing footer height on different devices(footer is not visible for some devices such as iPad air,mini)*/
+@media (max-width: 991px) {
+    .customfooter {
+        padding-bottom: 250px !important;
+    }
+}
+
+/*Fixing form submit button width on different devices*/
+@media (max-width: 991px) {
+    .customsubmitbutton {
+        width: 200px !important;
+    }
+}
+
+/*Fixing Client Image on different devices*/
+@media (min-width: 992px) and (max-width:1565px) {
+    .customimage1size {
+        width: 370px !important;
+        height: 370px !important;
+    }
+}
+@media (min-width: 992px) and (max-width:1565px) {
+    .customimage2size {
+        width: 370px !important;
+        height: 320px !important;
+    }
+}
+
+
+/*Fixing Embark Now! button not working below 576px width on different devices*/
+@media (max-width: 576px) {
+    .embarkbuttonfix {
+        opacity: 1 !important;
+    }
+}

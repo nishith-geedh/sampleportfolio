@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery plugin .js files -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="./index.css">
+    <title>Portfolio | Home</title>
+    <!--Agdasima font-->
+    <!--Bold-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap" rel="stylesheet">
+    <script>
+        //Form Validation
+        $().ready(function () {
+
+            $("#ValidateForm").validate({
+
+                rules: {
+
+                    fullname: "required",
+
+
+                    email: {
+
+                        required: true,
+
+                        email: true
+
+                    },
+
+                    mesg: "required"
+
+                },
+
+
+                messages: {
+
+                    fullname: "Please enter your name.",
+                    email: "Please enter your email.",
+                    mesg: "Please leave us a message."
+
+                }
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-offset navbar-custom navbar-dark"> <!--navbar-custom-->
+
+        <a class="navbar-brand" href="Index.html"><img src="Images/astrohead.png" alt="logo" height="60" width="60"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav"
+            aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: azure;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px;"
+                        href="Index.html"> Home</a></li>
+                <!--butn-custom & active & style="color: azure; font-size: x-large;"-->
+                <li class="nav-item"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px"
+                        href="About.html"> About </a></li>
+                <li class="nav-item"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px"
+                        href="Work.html"> Work </a></li>
+                <li class="nav-item active"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px"
+                        href="Contact.html"> Contact </a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <br><br><br><br>
+    <!--NAVBAR-->
+
+    <!--BODY-->
+    <br>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+                <h1 style="text-align: center; color: azure;">Get in touch<br></h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center"> <!--to center a div-->
+            <div class="col-md-6">
+                <form id="ValidateForm" class="cmxform" action="#" method="post" autocomplete="off">
+                    <label for="fullname" class="form-label" style="color: azure; font-size: x-large;">Name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Your Name"
+                        required>
+                    <br>
+                    <label for="email" class="form-label" style="color: azure; font-size: x-large;">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email Address"
+                        required>
+                    <br>
+                    <label for="mesg" class="form-label" style="color: azure; font-size: x-large;">Message</label>
+                    <textarea class="form-control" id="mesg" name="mesg" placeholder="Your Message" rows="6"
+                        required></textarea>
+                    <br><br>
+                    <input role="button" class="btn btn-warning btn-outline-warning rounded-pill customsubmitbutton"
+                        style="color: azure; border-color: #7c5df8; height: auto; width: 500px;" id="submit"
+                        type="submit">Submit</input>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+
+                <a href="#clientheading" class="downarrowanimation"><img src="Images/down-arrow.png" width="52px"
+                        height="52px"></a>
+
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 style="text-align: center; color: azure; padding-top: 100px; margin-top: -100px;" id="clientheading">
+                What Clients Say!<br></h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="container" style="border: 2px solid white; max-width: 1080px;">
+        <div class="img-container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <img style="margin-left: 30px; margin-top: 30px; height: 52px;" src="Images/left-quote.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <br>
+                    <p style="color:azure; font-size: 30px; margin-bottom: 5%; margin-left: 5%;">I've been working with
+                        James since 2016 and it's<br>been
+                        a fantastic experience! He works <br>quickly and regularly
+                        produces high-quality <br>results. He translates my
+                        concept into <br> professional visual design that serves my
+                        business goals.</p>
+                    <br><br>
+                    <p style="color:#F9F871; font-size: 35px; margin-left: 5%;"><strong>Wade Warren</strong></p>
+                    <p style="color:#47EDCB; font-size: 25px; margin-bottom: 5%; margin-left: 5%;"><i>- CEO,
+                            Ellantta</i></p>
+                    <img class="d-none d-lg-block border border-default img-text customimage1size"
+                        src="Images/astronautbelow.png" height="500px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container" style="border: 2px solid white; max-width: 1080px;">
+        <div class="img-container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <img style="margin-left: 30px; margin-top: 30px; height: 52px;" src="Images/left-quote.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <br>
+                    <p style="color:azure; font-size: 30px; margin-bottom: 5%; margin-left: 5%;">James worked on
+                        designated web pages while<br> keeping within the tight restrictions of our <br>branding and
+                        recycling
+                        new UI elements <br>the team had pre-approved within his own design.</p>
+                    <br><br>
+                    <p style="color:#F9F871; font-size: 35px; margin-left: 5%;"><strong>Arial Herrcik</strong></p>
+                    <p style="color:#47EDCB; font-size: 25px; margin-bottom: 5%; margin-left: 5%;"><i>- Project Manager,
+                            Bethel Music</i></p>
+                    <img class="d-none d-lg-block border border-default img-text customimage2size"
+                        src="Images/astronautbelow2.png" height="500px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sample test for image on div-->
+    <!--
+    <div class="container">
+        <div class='img-container' style="border: 2px solid white; max-width: 1080px;">
+            <div class='img-text' >text</div>
+            <img class="img-text" width='500' height='500' src='Images/astronautbelow.png' />
+    </div>
+-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <!--BODY-->
+
+<!--FOOTER-->
+<footer class="footer customfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                <h2> <span style="color: #7c5df8;">Portfolio</span></h2>
+                <p>A sample Portfolio</p>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f m-4"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                <h2 style="color: #7c5df8;">Services</h2>
+                <h6><a href="Work.html#uiux">UI/UX</a></h6>
+                <h6><a href="Work.html#webdes">Web Design</a></h6>
+                <h6><a href="Work.html#graphicdes">Graphic Design</a></h6>
+                <h6><a href="Work.html#photog">Photography</a></h6>
+                <h6><a href="Work.html#illus">Illustrations</a></h6>
+                <h6><a href="Work.html#logodes">Logo Design</a></h6>
+                <h6><a href="Work.html#webd">Web Development</a></h6>
+                <h6><a href="Work.html#productdes">Product Design</a></h6>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                <h2 style="color: #7c5df8;">Contact Information</h2>
+                <h6>Mumbai, Maharashtra, India</h6>
+                <h6>+123456789</h6>
+                <h6></h6>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                <h2 style="color: #7c5df8;">Our Location on <br>Google Maps</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.03900799053!2d72.88118615!3d19.082250749999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689566217198!5m2!1sen!2sin"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+</footer>
+<!--FOOTER-->
+
+
+    <!--Place these 2 lines before the body tag ends for the navbar to become responsive-->
+    <!--Because of these 2 lines bootstrap is not working for some lines-->
+    <!--Hence form validation is also not working/not giving custom messages-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery plugin .js files -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="./index.css">
+    <title>Portfolio | Home</title>
+    <!--Agdasima font-->
+    <!--Bold-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap" rel="stylesheet">
+
+
+
+    <script>
+        // Fading in the heading text
+        $(document).ready(function () {
+            $(".mainheading").fadeIn(2000).removeClass("hidden");
+            $(".mainbutton").delay(2000).fadeIn(2000).removeClass("hidden");
+        });
+
+        //Fading in the Portfolio Showcase text on scroll of page
+
+        $(document).ready(function () {
+
+            // Every time the window is scrolled... 
+            $(window).scroll(function () {
+
+                // ...Check the location of each desired element 
+                $('.hideme').each(function (i) {
+
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    // If the object is completely visible in the window, fade it in
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({ 'opacity': '1' }, 2000);
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-offset navbar-custom navbar-dark"> <!--navbar-custom-->
+
+        <a class="navbar-brand" href="Index.html"><img src="Images/astrohead.png" alt="logo" height="60" width="60"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav"
+            aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: azure;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px;"
+                        href="Index.html"> Home</a></li>
+                <!--butn-custom & active & style="color: azure; font-size: x-large;"-->
+                <li class="nav-item"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px"
+                        href="About.html"> About </a></li>
+                <li class="nav-item"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px"
+                        href="Work.html"> Work </a></li>
+                <li class="nav-item"><a class="nav-link customwidth"
+                        style="color: azure; font-size: x-large; padding-left: 100px; padding-right: 100px"
+                        href="Contact.html"> Contact </a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <br><br><br><br>
+    <!--NAVBAR-->
+
+    <!--
+    <nav class="navbar navbar-custom">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="nav-item navbar-brand"> <img src="Images/astrohead.png" alt="logo" height="60" width="60"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item butn-custom nav-link active" style="color: azure;"><a href="#">Home</a></li>
+              <li class="nav-item butn-custom nav-link" style="color: azure;"><a href="#">About</a></li>
+              <li class="nav-item butn-custom nav-link" style="color: azure;"><a href="#">Work</a></li>
+              <li class="nav-item butn-custom nav-link" style="color: azure;"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    -->
+
+    <!--BODY-->
+    <div class="img-fluid custommargin">
+
+        <div>
+            <img src="Images/space.jpg" alt="homebg" class="w-100 h-100">
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 firstheading hidden">
+                <h1 style="color: azure; font-size: 5vw;" class="mainheading">EMBARK ON A COSMIC <br>JOURNEY OF
+                    CREATIVITY.</h1>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <a href="#targetscroll" role="button" onclick="increaseOpacity()"
+                            class="btn btn-warning btn-outline-warning rounded-pill mainbutton"
+                            style="color: azure; border-color: #7c5df8; height: auto; width: auto; margin: 1%; font-size: x-large; border-radius: 50px;">
+                            Embark now! </a> <!--rounded-pill class is not working here idk why-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 offset-xs-6 d-none d-lg-block">
+                <img class="imageheading img-responsive" src="Images/astronaut.png" height="700px" width="600px">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Jumbotron -->
+    <!--
+<div class="jumbotron">
+    <div class="container" id="maincontent" tabindex="-1">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="intro-text">
+                  <h1 class="name">Headline</h1>
+                  <hr class="star-light">
+                  <span class="skills">Sub-header</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+-->
+    <!-- Jumbotron -->
+
+    <h1 style="text-align: center; color: azure; padding-top: 100px; margin-top: -100px;" id="targetscroll"
+        class="hideme embarkbuttonfix">Portfolio Showcase</h1>
+    <!--style="padding-top: 100px; margin-top: -100px;" is added so that the navbar doesnot hide this anchor tag-->
+    <p style="text-align: center; color: azure; font-size: x-large;" class="hideme embarkbuttonfix">Explore my latest
+        innovative designs
+        here!</p>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 hideme">
+                <img src="Images/1image.png" class="w-100 rounded mb-4 mr-2">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 hideme">
+                <img src="Images/2image.png" class="w-100 rounded mb-4 mr-2">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 hideme">
+                <img src="Images/3image.png" class="w-100 rounded mb-4 mr-2">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container" style="display: flex; justify-content: center; "> <!--To center the div (button)-->
+        <div class="row">
+            <a href="Work.html" role="button" class="btn btn-warning btn-outline-warning rounded-pill"
+                style="color: azure; border-color: #7c5df8; height: auto; width: auto; margin: 1%; font-size: x-large; border-radius: 50px;">
+                Visit my Work Page to see more of my works! </a>
+        </div>
+    </div>
+    <br><br>
+    <!--BODY-->
+
+    <!--FOOTER-->
+    <footer class="footer customfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                    <h2> <span style="color: #7c5df8;">Portfolio</span></h2>
+                    <p>A sample Portfolio</p>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-f m-4"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                    <h2 style="color: #7c5df8;">Services</h2>
+                    <h6><a href="Work.html#uiux">UI/UX</a></h6>
+                    <h6><a href="Work.html#webdes">Web Design</a></h6>
+                    <h6><a href="Work.html#graphicdes">Graphic Design</a></h6>
+                    <h6><a href="Work.html#photog">Photography</a></h6>
+                    <h6><a href="Work.html#illus">Illustrations</a></h6>
+                    <h6><a href="Work.html#logodes">Logo Design</a></h6>
+                    <h6><a href="Work.html#webd">Web Development</a></h6>
+                    <h6><a href="Work.html#productdes">Product Design</a></h6>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                    <h2 style="color: #7c5df8;">Contact Information</h2>
+                    <h6>Mumbai, Maharashtra, India</h6>
+                    <h6>+123456789</h6>
+                    <h6></h6>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 py-3 py-md-5">
+                    <h2 style="color: #7c5df8;">Our Location on <br>Google Maps</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.03900799053!2d72.88118615!3d19.082250749999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689566217198!5m2!1sen!2sin"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+    </footer>
+    <!--FOOTER-->
+
+    <!--Place these before the body tag ends for the navbar to become responsive-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
